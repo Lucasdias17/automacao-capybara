@@ -1,0 +1,12 @@
+Cypress.Commands.add('preencherformulario', customer => {
+        cy.get('#first-name').type(customer.name)
+        cy.get('#last-name').type(customer.lastname)
+        cy.get('#email').type(customer.email)
+        cy.get('#ticket-quantity').select('2')
+        cy.get('#vip').check()
+        cy.get('#publication').check()
+        cy.get('#requests').type('Testes com cypress básico')
+        cy.get('#agree').check()
+        cy.get('#signature').type('Teste Teste')
+        cy.get('.active').click()
+})
